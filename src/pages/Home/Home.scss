@@ -145,7 +145,7 @@
 
 // popularDes
 .popularDes {
-    margin-top: 65vh;
+    margin-top: 67vh;
     &__wrap {
         display: flex;
         align-items: center;  
@@ -459,3 +459,43 @@
     }
 }
 // End article
+// fixed
+.fixed {
+    &__goTop {
+        width: 45px;
+        height: 45px;
+        background-color: #1EC6B6;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 1.3rem;
+        position: fixed;
+        right: 10px;
+        bottom: 20px;
+        text-decoration: none;
+    }
+    &__watchMore {
+        background-color: #fff;
+        border-radius: 8px 0 0 8px;
+        z-index: 2;
+        width: 40px;
+        height: 145px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 10px 0;
+        position: fixed;
+        right: 0;
+        top: 150px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+    &__watchMore-item {
+        color: #222;
+        font-size: 1.5rem;
+        padding: 4px;
+    }
+}
+// End fixed

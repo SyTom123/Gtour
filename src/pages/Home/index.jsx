@@ -405,6 +405,26 @@ const Home = () => {
             </div> 
             <Footer/>
 
+            <div className="fixed">
+                <div className="fixed__watchMore">
+                    <a href="/" className='fixed__watchMore-item'>
+                        <i className="fa-solid fa-gear"></i>
+                    </a>
+                    <a href="/" className='fixed__watchMore-item'>
+                        <i className="fa-regular fa-heart"></i>
+                    </a>
+                    <a href="/" className='fixed__watchMore-item'>
+                        <i className="fa-solid fa-book-open"></i>
+                    </a>
+                    <a href="/" className='fixed__watchMore-item'>
+                        <i className="fa-solid fa-cart-shopping"></i>
+                    </a>
+                </div>
+                <a href='/' className="fixed__goTop">
+                    <i className="fa-solid fa-angle-up"></i>
+                </a>
+            </div>
+
         </>
 
     )
