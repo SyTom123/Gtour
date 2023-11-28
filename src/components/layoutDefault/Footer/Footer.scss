@@ -1,0 +1,164 @@
+@import "../../../index.scss";
+.footer {
+    background-color: #000;
+    margin-top: 80px;
+    color: #fff;
+
+    &__wrap {
+        display: flex;
+        // align-items: center;
+        justify-content: space-between;
+        padding-top: 60px;
+        margin-bottom: 40px;
+    }
+    &__awards {
+        width: calc(35% - 25px);
+
+    }
+    &__awards-title {
+        font-size: 1.8rem;
+        font-weight: 700;
+        font-family: $font-one;
+    }
+    &__awards-desc {
+        color: #ccc;
+        font-size: 1.5rem;
+        font-family: $font-two;
+        margin-top: 20px;
+        line-height: 2.5rem;
+    }
+    &__awards-image {
+        width: 246px;
+        height: 113px;
+        margin-top: 30px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__contact {
+        width: calc(30% - 25px);
+    }
+    &__contact-title{
+        font-size: 1.8rem;
+        font-weight: 700;
+        font-family: $font-one;
+        margin-bottom: 20px;
+    }
+    &__contact-box {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 14px;
+    }
+    &__contact-box-icon {
+        color: #ccc;
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+        margin-right: 10px;
+    }
+    &__contact-box-text {
+        color: #ccc;
+        font-size: 1.5rem;
+        font-family: $font-two;
+        line-height: 2.5rem;
+        
+    }
+    &__contact-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 30px;
+    }
+    &__contact-item {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-size: 1.6rem;
+        color: #fff;
+        margin-right: 15px;
+    }
+    &__facebook {
+        background-color: #2D5F9A;
+    }
+    &__twitter {
+        background: #00C3F3;
+    }
+    &__youtube {
+        background: #CC181E;
+    }
+    &__pinterest {
+        background: #BD081C;
+    }
+    &__instagram {
+        background: #405DE6;
+    }
+
+
+    &__trips {
+        width: calc(35% - 25px);
+    }
+    &__trips-title {
+        font-size: 1.8rem;
+        font-weight: 700;
+        font-family: $font-one;
+        margin-bottom: 20px;
+    }
+    &__trips-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__trips-image {
+        width: calc(100% / 3 - 5px);
+        aspect-ratio: 1/1;
+        overflow: hidden;
+        margin-bottom: 8px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+    }
+    &__bottom {
+        border-top:1px solid #222 ;
+        padding: 30px 0;
+        
+    }
+    &__bottom-content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__coppyRight {
+        color: #ccc;
+        font-size: 1.2rem;
+        font-family: $font-one;
+        line-height: 2.04rem;
+    }
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    &__list-item a {
+        text-decoration: none;
+        color: #ccc;
+        font-size: 1.2rem;
+        font-family: $font-one;
+        line-height: 2.04rem;
+        margin-left: 20px;
+    }
+
+
+}

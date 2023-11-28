@@ -16,6 +16,7 @@ import article1 from "../../assess/images/article-1.jpg";
 import article2 from "../../assess/images/article-2.jpg";
 import article3 from "../../assess/images/article-3.jpg";
 import './Home.scss';
+import Footer from '../../components/layoutDefault/Footer';
 const Home = () => {
     const [display, setDisplay] = useState("");
     const handleDisplayMoreSearch = () => {
@@ -402,6 +403,7 @@ const Home = () => {
                     </div>
                 </div>
             </div> 
+            <Footer/>
 
         </>
 
