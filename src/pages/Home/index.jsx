@@ -8,6 +8,9 @@ import london from "../../assess/images/london.jpg"
 import bestTrip1 from "../../assess/images/bestTrip1.jpeg"
 import bestTrip2 from "../../assess/images/bestTrip2.jpeg"
 import bestTrip3 from "../../assess/images/bestTrip3.jpeg"
+import mapMarker from "../../assess/images/Map-Marker.png"
+import worldwide from "../../assess/images/Worldwide-Location.png"
+import airBalloon from "../../assess/images/Hot-Air-Balloon.png"
 import './Home.scss';
 const Home = () => {
     const [display, setDisplay] = useState("");
@@ -252,6 +255,52 @@ const Home = () => {
                     </div>
                 </div>
 
+            </div>
+
+            <div className="whyChoose">
+                <div className="container">
+                    <h2 className="boxHead__title">
+                        Why Choose Us
+                    </h2>
+                    <p className="boxHead__desc">
+                        Here are reasons you should plan trip with us
+                    </p>
+                    <div className="whyChoose__wrap">
+                        <div className="whyChoose__box">
+                            <div className="whyChoose__image">
+                                <img src={mapMarker} alt="Map Marker" />
+                            </div>
+                            <h2 className="whyChoose__title">
+                                Handpicked Hotels
+                            </h2>
+                            <p className="whyChoose__desc">
+                                Lorem ipsum dolor sit amet, consect adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa
+                            </p>
+                        </div>
+                        <div className="whyChoose__box">
+                            <div className="whyChoose__image">
+                                <img src={worldwide} alt="worldwide" />
+                            </div>
+                            <h2 className="whyChoose__title">
+                                World Class Service
+                            </h2>
+                            <p className="whyChoose__desc">
+                                Lorem ipsum dolor sit amet, consect adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa
+                            </p>
+                        </div>
+                        <div className="whyChoose__box">
+                            <div className="whyChoose__image">
+                                <img src={airBalloon} alt="worldwide" />
+                            </div>
+                            <h2 className="whyChoose__title">
+                                Best Price Guarantee
+                            </h2>
+                            <p className="whyChoose__desc">
+                                Lorem ipsum dolor sit amet, consect adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </>
