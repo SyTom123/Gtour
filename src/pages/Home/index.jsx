@@ -169,17 +169,17 @@ const Home = () => {
                                 </div>
                                 <div className="bestTrip__more">
                                     <div className='bestTrip__stars'>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-regular fa-star"></i>
+                                        <i className="fa-solid fa-star"></i>
+                                        <i className="fa-solid fa-star"></i>
+                                        <i className="fa-solid fa-star"></i>
+                                        <i className="fa-solid fa-star"></i>
+                                        <i className="fa-regular fa-star"></i>
                                     </div>
                                     <div className='bestTrip__reviews'>
                                         4 reviews
                                     </div>
                                     <div className='bestTrip__time'>
-                                        <i class="fa-regular fa-clock"></i>
+                                        <i className="fa-regular fa-clock"></i>
                                         <span>5 days</span>
                                     </div>
                                 </div>
@@ -203,17 +203,17 @@ const Home = () => {
                                 </div>
                                 <div className="bestTrip__more">
                                     <div className='bestTrip__stars'>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-regular fa-star"></i>
+                                        <i className="fa-solid fa-star"></i>
+                                        <i className="fa-solid fa-star"></i>
+                                        <i className="fa-solid fa-star"></i>
+                                        <i className="fa-solid fa-star"></i>
+                                        <i className="fa-regular fa-star"></i>
                                     </div>
                                     <div className='bestTrip__reviews'>
                                         4 reviews
                                     </div>
                                     <div className='bestTrip__time'>
-                                        <i class="fa-regular fa-clock"></i>
+                                        <i className="fa-regular fa-clock"></i>
                                         <span>6 days</span>
                                     </div>
                                 </div>
@@ -241,17 +241,17 @@ const Home = () => {
                                 </div>
                                 <div className="bestTrip__more">
                                     <div className='bestTrip__stars'>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-regular fa-star"></i>
+                                        <i className="fa-solid fa-star"></i>
+                                        <i className="fa-solid fa-star"></i>
+                                        <i className="fa-solid fa-star"></i>
+                                        <i className="fa-solid fa-star"></i>
+                                        <i className="fa-regular fa-star"></i>
                                     </div>
                                     <div className='bestTrip__reviews'>
                                         4 reviews
                                     </div>
                                     <div className='bestTrip__time'>
-                                        <i class="fa-regular fa-clock"></i>
+                                        <i className="fa-regular fa-clock"></i>
                                         <span>5 days</span>
                                     </div>
                                 </div>

@@ -1,12 +1,31 @@
+import { useState } from "react";
 import logo from "../../../assess/images/logo2.png";
+import logo1 from "../../../assess/images/logo1.png";
 import "./Header.scss";
+import { useEffect } from "react";
 const Header = () => {
+
+    const [sticky, setSticky] = useState("");
+
+    const isSticky = () => {
+        const scrollTop = window.scrollY;
+        const stickyClass = scrollTop >= 800 ? "sticky" : "";
+        setSticky(stickyClass);
+      };
+
+    useEffect(() => {
+        window.addEventListener("scroll", isSticky);
+        return () => {
+          window.removeEventListener("scroll", isSticky);
+        };
+      }, []);
     return (
-        <div className="layout_header">
+        <div className={"layout_header " + sticky}>
             <div className="container">
-                <div className="header">
+                <div className={"header " + sticky}>
                     <div className="header__image">
-                        <img src={logo} alt="Logo" />
+                        <img src={logo1} className={"header__image-logo-1 "+ sticky} alt="Logo" />
+                        <img src={logo} className={"header__image-logo-2 "+ sticky} alt="Logo" />
                     </div>
                     <div className="header__right">
                         <ul className="header__menu">

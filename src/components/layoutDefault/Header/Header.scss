@@ -1,10 +1,8 @@
 @import "../../../index.scss";
 .layout_header {
     height: 74px;
-    // background-color: #fff;
     background-color: transparent;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;  
-    border-bottom: 1px solid #d5d5d5;
     display: flex;
     align-items: center;
     position: fixed;
@@ -12,15 +10,46 @@
     left: 0px;
     width: 100%;
     z-index: 999;
+    animation: Growth-2 ease-in 1s ;
+
+}
+.layout_header.sticky {
+    background-color: #fff;
+    animation: Growth-2 ease-in 2s ;
+}
+.header.sticky {
+    color: $black-color;
+}
+@keyframes Growth-2 {
+    from{
+        opacity: 0;
+        height: 0;;
+    }
+    to{
+        opacity: 1;
+        height: 74px;
+    }
 }
 .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    color: #fff;
     &__image img {
         height: 22px;
     }
-
+    &__image-logo-1 {
+        display: block;
+    }
+    &__image-logo-1.sticky {
+        display: none;
+    }
+    &__image-logo-2 {
+        display: none;
+    }
+    &__image-logo-2.sticky {
+        display: block;
+    }
     &__right {
         display: flex;
         align-items: center;
@@ -38,11 +67,12 @@
     &__menu-item-link {
         display: flex;
         align-items: center;
-        color: #fff;
         text-decoration: none;
         padding: 26px 17px 26px 0;
         margin-right: 5px;
+        color: inherit;
     }
+   
     &__menu-item-link:hover {
         color: $red-color;
     }
@@ -65,7 +95,7 @@
         top: 70px;
         left: -20px;
         display: inline-block;
-        width: 194px;
+        min-width: 250px;
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
         border-radius: 8px;
         display: none;
@@ -79,7 +109,7 @@
         top: 0px;
         right: calc(-148% - 1px);
         display: inline-block;
-        width: 194px;
+        width: 250px;
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
         border-radius: 8px;
         display: none;
@@ -133,14 +163,18 @@
         position: relative;
         top: 1px;
         cursor: pointer;
-        color: #fff;
+        color: inherit;
     }
     &__cart {
         font-size: 1.3rem;
         position: relative;
+        color: inherit;
+    }
+    &__cart-link {
+        color: inherit;
     }
     &__cart-icon {
-        color: #fff;
+        color: inherit;
     }
     &__cart-number {
         position: absolute;
