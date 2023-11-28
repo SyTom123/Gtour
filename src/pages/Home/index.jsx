@@ -5,6 +5,9 @@ import tokio from "../../assess/images/tokio.jpg"
 import seoul from "../../assess/images/seoul.jpg"
 import paris from "../../assess/images/paris.jpg"
 import london from "../../assess/images/london.jpg"
+import bestTrip1 from "../../assess/images/bestTrip1.jpeg"
+import bestTrip2 from "../../assess/images/bestTrip2.jpeg"
+import bestTrip3 from "../../assess/images/bestTrip3.jpeg"
 import './Home.scss';
 const Home = () => {
     const [display, setDisplay] = useState("");
@@ -127,8 +130,128 @@ const Home = () => {
 
             <div className='bestTrip'>
                 <div className="container">
+                    <h2 className="boxHead__title">
+                        Best Value Trips
+                    </h2>
+                    <p className="boxHead__desc">
+                        Best offers trips from us
+                    </p>
 
+                    <div className="bestTrip__wrap">
+                        <div className="bestTrip__box">
+                            <div className="bestTrip__image">
+                                <img src={bestTrip1} alt="French Autumn" />
+                                <div className="bestTrip__price">
+                                    <div className="bestTrip__newPrice">
+                                        $ 5,000
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="bestTrip__content">
+                                <div className= " bestTrip__title">
+                                    French Autumn
+                                </div>
+                                <div className= " bestTrip__desc">
+                                    City Tour, Urban
+                                </div>
+                                <div className="bestTrip__more">
+                                    <div className='bestTrip__stars'>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+                                    <div className='bestTrip__reviews'>
+                                        4 reviews
+                                    </div>
+                                    <div className='bestTrip__time'>
+                                        <i class="fa-regular fa-clock"></i>
+                                        <span>5 days</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="bestTrip__box">
+                            <div className="bestTrip__image">
+                                <img src={bestTrip2} alt="Grand Switzerland" />
+                                <div className="bestTrip__price">
+                                    <div className="bestTrip__newPrice">
+                                        $ 6,000
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="bestTrip__content">
+                                <div className= " bestTrip__title">
+                                    Grand Switzerland
+                                </div>
+                                <div className= " bestTrip__desc">
+                                    Shoping, Mountain, Snow $ Ice
+                                </div>
+                                <div className="bestTrip__more">
+                                    <div className='bestTrip__stars'>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+                                    <div className='bestTrip__reviews'>
+                                        4 reviews
+                                    </div>
+                                    <div className='bestTrip__time'>
+                                        <i class="fa-regular fa-clock"></i>
+                                        <span>6 days</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="bestTrip__box">
+                            <div className="bestTrip__image">
+                                <img src={bestTrip3} alt="Discover Japan" />
+                                <div className="bestTrip__price">
+                                    <div className="bestTrip__oldPrice">
+                                        $ 3,000
+                                    </div>
+                                    <div className="bestTrip__newPrice">
+                                        $ 2,500
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="bestTrip__content">
+                                <div className= " bestTrip__title">
+                                    Discover Japan
+                                </div>
+                                <div className= " bestTrip__desc">
+                                    City Tours, Iconic
+                                </div>
+                                <div className="bestTrip__more">
+                                    <div className='bestTrip__stars'>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+                                    <div className='bestTrip__reviews'>
+                                        4 reviews
+                                    </div>
+                                    <div className='bestTrip__time'>
+                                        <i class="fa-regular fa-clock"></i>
+                                        <span>5 days</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="bestTrip__sale">
+                                <span>
+                                    Sale
+                                </span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
             </div>
 
         </>
