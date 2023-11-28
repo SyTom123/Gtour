@@ -11,6 +11,10 @@ import bestTrip3 from "../../assess/images/bestTrip3.jpeg"
 import mapMarker from "../../assess/images/Map-Marker.png"
 import worldwide from "../../assess/images/Worldwide-Location.png"
 import airBalloon from "../../assess/images/Hot-Air-Balloon.png"
+import bridge from "../../assess/images/bridge.jpg";
+import article1 from "../../assess/images/article-1.jpg";
+import article2 from "../../assess/images/article-2.jpg";
+import article3 from "../../assess/images/article-3.jpg";
 import './Home.scss';
 const Home = () => {
     const [display, setDisplay] = useState("");
@@ -95,12 +99,15 @@ const Home = () => {
 
             <div className="popularDes">
                 <div className="container">
-                    <h2 className="boxHead__title">
-                        Popular Destinations
-                    </h2>
-                    <p className="boxHead__desc">
-                        World's best tourist destinations
-                    </p>
+                    <div className="boxHead">
+                        <h2 className="boxHead__title">
+                            Popular Destinations
+                        </h2>
+                        <p className="boxHead__desc">
+                            World's best tourist destinations
+                        </p>
+                    </div>
+                    
                     <div className="popularDes__wrap">
                         <a className="popularDes__box" href='/'>
                             <div className="popularDes__image">
@@ -133,15 +140,17 @@ const Home = () => {
 
             <div className='bestTrip'>
                 <div className="container">
-                    <h2 className="boxHead__title">
-                        Best Value Trips
-                    </h2>
-                    <p className="boxHead__desc">
-                        Best offers trips from us
-                    </p>
+                    <div className="boxHead">
+                        <h2 className="boxHead__title">
+                            Best Value Trips
+                        </h2>
+                        <p className="boxHead__desc">
+                            Best offers trips from us
+                        </p>
+                    </div>
 
                     <div className="bestTrip__wrap">
-                        <div className="bestTrip__box">
+                        <a href="/" className="bestTrip__box">
                             <div className="bestTrip__image">
                                 <img src={bestTrip1} alt="French Autumn" />
                                 <div className="bestTrip__price">
@@ -174,8 +183,8 @@ const Home = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="bestTrip__box">
+                        </a>
+                        <a href="/" className="bestTrip__box">
                             <div className="bestTrip__image">
                                 <img src={bestTrip2} alt="Grand Switzerland" />
                                 <div className="bestTrip__price">
@@ -208,9 +217,9 @@ const Home = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
 
-                        <div className="bestTrip__box">
+                        <a href="/" className="bestTrip__box">
                             <div className="bestTrip__image">
                                 <img src={bestTrip3} alt="Discover Japan" />
                                 <div className="bestTrip__price">
@@ -251,7 +260,7 @@ const Home = () => {
                                     Sale
                                 </span>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
 
@@ -259,12 +268,14 @@ const Home = () => {
 
             <div className="whyChoose">
                 <div className="container">
-                    <h2 className="boxHead__title">
-                        Why Choose Us
-                    </h2>
-                    <p className="boxHead__desc">
-                        Here are reasons you should plan trip with us
-                    </p>
+                    <div className="boxHead">
+                        <h2 className="boxHead__title">
+                            Why Choose Us
+                        </h2>
+                        <p className="boxHead__desc">
+                            Here are reasons you should plan trip with us
+                        </p>
+                    </div>
                     <div className="whyChoose__wrap">
                         <div className="whyChoose__box">
                             <div className="whyChoose__image">
@@ -302,6 +313,95 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            
+            <div className='banner'>
+                <div className="banner__image">
+                    <img src={bridge} alt="Bridge" />
+                </div>
+            </div>
+
+            <div className="article">
+                <div className="container">
+                    <div className="boxHead">
+                        <h2 className="boxHead__title">
+                            Articles & Tips
+                        </h2>
+                        <p className="boxHead__desc">
+                            Explore some of the best tips from around the world
+                        </p>
+                    </div>
+                    <div className="article__wrap">
+                        <a href='/' className="article__box">
+                            <div className="article__image">
+                                <img src={article1} alt="Article-1" />
+                            </div>
+                            <div className="article__content">
+                                <div className="article__date">
+                                    DECEMBER 10, 2016
+                                </div>
+                                <h2 className="article__title">
+                                    Memorial Day to Someone Told Me to Travel
+                                </h2>
+                                <p className="article__desc">
+                                    Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache...   
+                                </p>
+                                <div className="article__more">
+                                    <span className="article__more-text">
+                                        Read more
+                                    </span>
+                                    <i className="article__more-icon fa-solid fa-angle-right"></i>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href='/' className="article__box">
+                            <div className="article__image">
+                                <img src={article3} alt="Article-3" />
+                            </div>
+                            <div className="article__content">
+                                <div className="article__date">
+                                    DECEMBER 10, 2016
+                                </div>
+                                <h2 className="article__title">
+                                    7 Tips For Nomads On A Budget Trips
+                                </h2>
+                                <p className="article__desc">
+                                    Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache...   
+                                </p>
+                                <div className="article__more">
+                                    <span className="article__more-text">
+                                        Read more
+                                    </span>
+                                    <i className="article__more-icon fa-solid fa-angle-right"></i>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href='/' className="article__box">
+                            <div className="article__image">
+                                <img src={article2} alt="Article-2" />
+                            </div>
+                            <div className="article__content">
+                                <div className="article__date">
+                                    DECEMBER 10, 2016
+                                </div>
+                                <h2 className="article__title">
+                                    Taking A Travel Blog Victory Lap
+                                </h2>
+                                <p className="article__desc">
+                                    Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache...   
+                                </p>
+                                <div className="article__more">
+                                    <span className="article__more-text">
+                                        Read more
+                                    </span>
+                                    <i className="article__more-icon fa-solid fa-angle-right"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div> 
 
         </>
 
