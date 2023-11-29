@@ -33,8 +33,10 @@ const Header = () => {
             <div className="container">
                 <div className={"header " + sticky}>
                     <div className="header__image">
-                        <img src={logo1} className={"header__image-logo-1 "+ sticky} alt="Logo" />
-                        <img src={logo} className={"header__image-logo-2 "+ sticky} alt="Logo" />
+                        <a href="/">
+                            <img src={logo1} className={"header__image-logo-1 "+ sticky} alt="Logo" />
+                            <img src={logo} className={"header__image-logo-2 "+ sticky} alt="Logo" />
+                        </a>
                     </div>
                     <div className="header__right">
                         <ul className="header__menu">
