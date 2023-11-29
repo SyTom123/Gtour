@@ -151,9 +151,11 @@ const Home = () => {
                 </div>
             </div>
             <div className="search">
-                <video width="100%" autoPlay muted loop className='search__video'> 
-                    <source src={videoNorway}/>
-                </video>
+                <div className="search__videos">
+                    <video width="100%" autoPlay muted loop className='search__video'> 
+                        <source src={videoNorway}/>
+                    </video>
+                </div>
                 <div className='search__content'>
                     <div className="container">
                         <h2 className='search__title'>Where do you want to go?</h2>

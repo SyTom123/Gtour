@@ -6,11 +6,16 @@
         top: 0;
         left: 0;
         z-index: -1;
+        height: 750px;
+        object-fit: cover;
+
     }
+
     &__content {
         text-align: center;
         margin-top: 280px;
         font-family: $font-one;
+        position: relative;
     }
     &__title {
         font-size: 3.6rem;
@@ -123,6 +128,56 @@
     &__more-icon-up.display {
         display: block;
     }
+    // responsive
+    @media (max-width: 767.98px){
+        
+        .search {
+            &__video {
+                height: 550px;
+                object-fit: cover;
+            }
+            &__content {
+                margin-top: 100px;
+            }
+            &__title {
+                font-size: 2.4rem;
+                margin-bottom: 4px;
+            }
+            &__box {
+                width: calc(50% - 24px);
+            }
+            &__button {
+                width: calc(50% - 24px);
+            }
+        }
+   
+    }
+    @media (max-width: 575.98px){
+        .search {
+            &__video {
+                height: 600px;
+                object-fit: cover;
+            }
+            &__content {
+                margin-top: 70px;
+            }
+            &__title {
+                font-size: 2.4rem;
+                margin-bottom: 4px;
+            }
+            &__box {
+                width: calc(100% );
+                margin-bottom: 10px;
+                margin-right: 0;
+            }
+            &__button {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+        }
+    }
+    
+    // responsive
 }
 .modal {
     width: 100%;
@@ -304,7 +359,8 @@
         font-size: 3.6rem;
         font-weight: 700;
         color: $black-color;
-        font-family: $font-one;;
+        font-family: $font-one;
+        line-height: 3.1rem;
     }
     &__desc {
         color: #8D9191;
@@ -313,23 +369,33 @@
         text-align: center;
         margin-top: 20px;
     }
+    @media (max-width: 767.98px){
+        &__title {
+            font-size: 2.4rem;
+        }
+    }
+
 }
 // End boxHead
 
 // popularDes
+
 .popularDes {
     margin-top: 67vh;
+   
     &__wrap {
         display: flex;
         align-items: center;  
         justify-content: space-between;  
         margin-top: 50px;
+        flex-wrap: wrap;
     }
     &__box {
         width: calc(25% - 22.5px); 
         position: relative;
         text-decoration: none;
         transition: all ease-in 0.1s;
+        margin-bottom: 25px;
     }
 
     &__box:hover {
@@ -358,14 +424,42 @@
         bottom: 20px;
     }
 }
+    // responsive
+@media (max-width: 767.98px){
+    .popularDes {
+        margin-top: 50vh;
+
+        &__box {
+            width: calc(50% - 16px); 
+        }
+        &__image{
+            width: 100%;
+            height: 300px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+    }
+}
+@media (max-width: 575.98px){
+    .popularDes {
+        margin-top: 35vh;
+
+        &__box {
+            width: 100%; 
+        }
+    }
+}
+    // End responsive
 // best Trip
 .bestTrip {
-    margin-top: 86px;
+    margin-top: 60px;
 
     &__wrap {
         display: flex;
         justify-content: space-between;
         margin-top: 50px;
+        flex-wrap: wrap;
     }
     &__box {
         width: calc( (100% / 3) - 21px);
@@ -374,6 +468,7 @@
         transition: all ease-in-out 0.1s;
         position: relative;
         text-decoration: none;
+        margin-bottom: 25px;
     }
     &__box:hover {
         transform: translateY(-4px);
@@ -491,22 +586,46 @@
         }
     }
 }
+// responsive
+@media (max-width: 767.98px){
+    .bestTrip {
+        &__box {
+            width: calc(50% - 16px); 
+        }
+
+    }
+}
+@media (max-width: 575.98px){
+    .bestTrip {
+        margin-top: 10px;
+
+        &__box {
+            width: 100%; 
+        }
+        &__wrap {
+            margin-top: 40px;
+        }
+    }
+}
+    // End responsive
 // End best Trip
 // whyChoose
 .whyChoose {
-    margin-top: 80px;
+    margin-top: 65px;
 
     &__wrap {
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin-top: 50px;
+        flex-wrap: wrap;
     }
     &__box {
         width: calc( 100% / 3 - 32px);
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 25px;
     }
     &__image {
         width: 150px;
@@ -534,12 +653,34 @@
     }
     
 }
+// responsive
+@media (max-width: 767.98px){
+    .whyChoose  {
+        &__box {
+            width: calc( 100% / 2 - 32px);
+        }
+
+    }
+}
+@media (max-width: 575.98px){
+    .whyChoose {
+        margin-top: 10px;
+
+        &__box {
+            width: 100%; 
+        }
+        &__wrap {
+            margin-top: 40px;
+        }
+    }
+}
+// End responsive
 // End whyChoose
 // Banner
 .banner {
     width: 100%;
     height: 370px;
-    margin-top: 80px;
+    margin-top: 65px;
     &__image{
         width: 100%;
         height: 100%;
@@ -560,6 +701,7 @@
         margin-top: 48px;
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
     &__box {
         width: calc(100% / 3 - 21px);
@@ -567,6 +709,7 @@
         border: 1px solid #dbdbdb;
         transition: all ease-in-out 0.1s;
         text-decoration: none;
+        margin-bottom: 25px;
     }
     &__box:hover {
         transform: translateY(-4px);
@@ -633,6 +776,26 @@
         margin-left: 8px;
     }
 }
+// responsive
+@media (max-width: 767.98px){
+    .article  {
+        &__box {
+            width: calc(100% / 2 - 15px);
+        }
+
+    }
+}
+@media (max-width: 575.98px){
+    .article {
+        &__box {
+            width: 100%; 
+        }
+        &__wrap {
+            margin-top: 40px;
+        }
+    }
+}
+// End responsive
 // End article
 // fixed
 .fixed {

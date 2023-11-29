@@ -190,8 +190,16 @@
         border-radius: 50%;
         font-size: 1.2rem;
     }
+    // responsive 
+    @media (max-width: 767.98px){
+        &__menu {
+            display: none;
+        }
+    }
+    // End responsive 
 
 }
+
 @keyframes Growth {
     from{
         opacity: 0;

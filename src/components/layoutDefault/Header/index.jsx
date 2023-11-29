@@ -26,7 +26,6 @@ const Header = () => {
       const authen = useSelector((state) => state.authenReducer);
       const handleClick = () => {
         dispatch(Authen(!authen));
-        console.log(authen);
       };
      
     return (
