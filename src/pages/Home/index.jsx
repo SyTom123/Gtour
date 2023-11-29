@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import Header from '../../components/layoutDefault/Header'
 import videoNorway from '../../assess/videos/Spectacular Norway - from the air.mp4';
+import sideBar1 from "../../assess/images/sidebar-1.jpeg"
+import sideBar2 from "../../assess/images/sidebar-2.jpeg"
 import tokio from "../../assess/images/tokio.jpg"
 import seoul from "../../assess/images/seoul.jpg"
 import paris from "../../assess/images/paris.jpg"
@@ -17,8 +19,11 @@ import article2 from "../../assess/images/article-2.jpg";
 import article3 from "../../assess/images/article-3.jpg";
 import './Home.scss';
 import Footer from '../../components/layoutDefault/Footer';
+import { useDispatch, useSelector } from 'react-redux';
+import Authen from "../../components/actions/authen";
+
 const Home = () => {
-    const [display, setDisplay] = useState("");
+    const [display, setDisplay] = useState();
     const handleDisplayMoreSearch = () => {
         if(display === "") {
             setDisplay("display");
@@ -27,10 +32,124 @@ const Home = () => {
             setDisplay("");
         }
     }
+    const authen = useSelector((state) => state.authenReducer);
+    const dispatch = useDispatch();
+    const handleClick = () => {
+        dispatch(Authen(!authen));
+        console.log(authen);
+    };
     return (
         <>
             <Header />
-            
+            <div className={"modal " + (authen && "display")} >
+                <div className={"sideBar " + (authen && "display")}>
+                    <div className="sideBar__top">
+                        <div className="sideBar__close" onClick={() => handleClick()}>
+                            <i className="fa-solid fa-xmark"></i>
+                        </div>
+                    </div>
+                    <ul className="sideBar__menu-1">
+                        <li className="sideBar__menu-1-item">
+                            <a href="/" className="sideBar__menu-1-item-link">Home</a>
+                        </li>
+                        <li className="sideBar__menu-1-item">
+                            <a href="/" className="sideBar__menu-1-item-link">Tours</a>
+                        </li>
+                        <li className="sideBar__menu-1-item">
+                            <a href="/" className="sideBar__menu-1-item-link">Booking</a>
+                        </li>
+                        <li className="sideBar__menu-1-item">
+                            <a href="/"className="sideBar__menu-1-item-link">Destinations</a>
+                        </li>
+                        <li className="sideBar__menu-1-item">
+                            <a href="/" className="sideBar__menu-1-item-link">Pages</a>
+                        </li>
+                        <li className="sideBar__menu-1-item">
+                            <a href="/" className="sideBar__menu-1-item-link">Blog</a>
+                        </li>
+                        <li className="sideBar__menu-1-item">
+                            <a href="/" className="sideBar__menu-1-item-link">Shortcodes</a>
+                        </li>
+                        <li className="sideBar__menu-1-item">
+                            <a href="/" className="sideBar__menu-1-item-link">Shop</a>
+                        </li>
+                    </ul>
+                    <div className="sideBar__wrap">
+                        <a href='/' className="sideBar__box">
+                            <div className="sideBar__image">
+                                <img src={sideBar1} alt="sideBar-1" />
+                            </div>
+                            <div className="sideBar__price">
+                                <span className="sideBar__priceNew">
+                                    $3,900
+                                </span> 
+                            </div>  
+                            <div className="sideBar__title">
+                                Swiss Alps Trip
+                            </div>
+                            <div className="sideBar__stars">
+                                <i className="fa-solid fa-star"></i>
+                                <i className="fa-solid fa-star"></i>
+                                <i className="fa-solid fa-star"></i>
+                                <i className="fa-solid fa-star"></i>
+                                <i className="fa-regular fa-star"></i>
+                            </div>
+                        </a>
+                        <a href='/' className="sideBar__box">
+                            <div className="sideBar__image">
+                                <img src={sideBar2} alt="sideBar-2" />
+                            </div>
+                            <div className="sideBar__price">
+                                <span className="sideBar__priceOld">
+                                    $4,900
+                                </span> 
+                                <span className="sideBar__priceNew">
+                                    $3,900
+                                </span> 
+                            </div> 
+                            <div className="sideBar__title">
+                                5 Lake of Fuji San
+                            </div>
+                            <div className="sideBar__stars">
+                            <i className="fa-solid fa-star"></i>
+                                <i className="fa-solid fa-star"></i>
+                                <i className="fa-solid fa-star"></i>
+                                <i className="fa-solid fa-star"></i>
+                                <i className="fa-regular fa-star"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div href='/' className="sideBar__socials">
+                        <div className="sideBar__socials-item">
+                            <a href="/" className="sideBar__socials-item-link">
+                                <i className="fa-brands fa-square-facebook"></i>
+                            </a>
+                        </div>
+                        <div className="sideBar__socials-item">
+                            <a href="/" className="sideBar__socials-item-link">
+                                <i className="fa-brands fa-twitter"></i>
+                            </a>
+                        </div>
+                        <div className="sideBar__socials-item">
+                            <a href="/" className="sideBar__socials-item-link">
+                                <i className="fa-brands fa-youtube"></i>
+                            </a>
+                        </div>
+                        <div className="sideBar__socials-item">
+                            <a href="/" className="sideBar__socials-item-link">
+                                <i className="fa-brands fa-pinterest"></i>
+                            </a>
+                        </div>
+                        <div className="sideBar__socials-item">
+                            <a href="/" className="sideBar__socials-item-link">
+                                <i className="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                        
+                    </div>
+
+                </div>
+            </div>
             <div className="search">
                 <video width="100%" autoPlay muted loop className='search__video'> 
                     <source src={videoNorway}/>

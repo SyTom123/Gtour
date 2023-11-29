@@ -3,6 +3,8 @@ import logo from "../../../assess/images/logo2.png";
 import logo1 from "../../../assess/images/logo1.png";
 import "./Header.scss";
 import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import Authen from "../../actions/authen";
 const Header = () => {
 
     const [sticky, setSticky] = useState("");
@@ -19,6 +21,14 @@ const Header = () => {
           window.removeEventListener("scroll", isSticky);
         };
       }, []);
+
+      const dispatch = useDispatch();
+      const authen = useSelector((state) => state.authenReducer);
+      const handleClick = () => {
+        dispatch(Authen(!authen));
+        console.log(authen);
+      };
+     
     return (
         <div className={"layout_header " + sticky}>
             <div className="container">
@@ -564,7 +574,7 @@ const Header = () => {
                                 </ul>
                             </li>
                         </ul>
-                        <div className="header__sibar">
+                        <div className="header__sibar" onClick={() => handleClick()}  >
                             <i className="fa-solid fa-bars"></i>
                         </div>
                         <div className="header__cart">
