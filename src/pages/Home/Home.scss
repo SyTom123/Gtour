@@ -349,7 +349,20 @@
         display: block;
     }
 }
+//responsive
+@media (max-width: 575.98px){
+    .sideBar {
+        max-width: 300px;
+        padding: 20px 20px;
 
+        &__menu-1-item-link {
+            font-size: 2rem;
+        }
+    }
+   
+
+}
+//End responsive
 // End sideBar
 
 // boxHead
